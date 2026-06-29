@@ -3,7 +3,7 @@ requires = ["setuptools >= 77.0.3"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ai-tools"
+name = "ptools"
 version = "0.1.0"
 description = "Small collection of CLI tools"
 # readme = "README.md"
@@ -15,7 +15,7 @@ dependencies = [
 ]
 
 [project.scripts]
-video2txt = "ai_tools.cli.video2txt:main"
+video2txt = "ptools.cli.video2txt:main"
 
 [tool.setuptools.packages]
 find = {}
