@@ -44,6 +44,9 @@ def load_format_tool():
     model = load_env('OPENAI_MODEL', 'DEEPSEEK_MODEL', default="deepseek-chat")
     prompt = load_env('OPENAI_PROMPT', default=default_prompt)
 
+    if not api_key:
+        raise ValueError("API key is required. Please set the OPENAI_API_KEY or DEEPSEEK_API_KEY environment variable.")
+
     client = OpenAI(api_key=api_key, base_url=base_url)
     def format_content(content):
         resp = client.chat.completions.create(
